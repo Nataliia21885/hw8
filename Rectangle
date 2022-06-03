@@ -1,0 +1,63 @@
+public class Rectangle extends Shape implements Moveable {
+    private double height;
+    private double width;
+    private static final String NAME = "Rectangle";
+
+    public double getHeight() {
+        return height;
+    }
+
+    public void setHeight(double height) {
+        this.height = height;
+    }
+
+    public double getWidth() {
+        return width;
+    }
+
+    public void setWidth(double width) {
+        this.width = width;
+    }
+
+    public Rectangle(double x, double y, double height, double width) {
+        super(x, y);
+        this.height = height;
+        this.width = width;
+    }
+
+    @Override
+    public String getName() {
+        return NAME;
+    }
+
+    @Override
+    public double getArea() {
+        return height * width;
+    }
+
+    @Override
+    public double getPerimeter() {
+        return (height + width) * 2;
+    }
+
+    @Override
+    public String toString() {
+        return "Rectangle{" +
+                "height=" + height +
+                ", width=" + width +
+                '}';
+    }
+
+    @Override
+    public void move(double dx, double dy) {
+        this.x += dx;
+        this.y += dy;
+    }
+
+    @Override
+    public void resize(double koeff) {
+        this.height *= koeff;
+        this.width *= koeff;
+    }
+}
+
