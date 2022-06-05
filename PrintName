@@ -5,10 +5,11 @@ public class PrintName {
         Shape quad = new Quad(5, 8,15);
         Shape rightTriangle = new RightTriangle(5, 8, 10, 8, 6);
         Shape hexagon = new Hexagon(9, 8, 10);
-        System.out.println(circle.getName());
-        System.out.println(rectangle.getName());
-        System.out.println(quad.getName());
-        System.out.println(rightTriangle.getName());
-        System.out.println(hexagon.getName());
+        
+        printShapeName.print(circle);
+        printShapeName.print(rectangle);
+        printShapeName.print(quad);
+        printShapeName.print(rightTriangle);
+        printShapeName.print(hexagon);
     }
 }
